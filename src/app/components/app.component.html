@@ -1,0 +1,12 @@
+
+<div *ngIf="ordersDisplayer.orders.length>0 else loading">
+    <div *ngFor="let order of ordersDisplayer.orders">
+        {{order.name}} / {{order.price}}
+    </div>
+</div>
+<ng-template #loading>
+    loading...
+</ng-template>
+
+
+<router-outlet></router-outlet>
